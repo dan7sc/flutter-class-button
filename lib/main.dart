@@ -58,22 +58,28 @@ class _MyHomePageState extends State<MyHomePage> {
               style: Theme.of(context).textTheme.headline4,
             ),
 
-            _counter % 2 == 0
-            ? Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Flex(
-                direction: Axis.horizontal,
-                children: [
-                  Expanded(
-                    child: ElevatedButton(
-                      onPressed: _incrementCounter,
-                      child: Text("Adicionar"),
-                    ),
-                  ),
-                ],
-              )
-            )
-            : Container(),
+            RaisedButton(
+              onPressed: _incrementCounter,
+              child: Text("Adicionar"),
+              color: Colors.blue,
+            ),
+
+            // _counter % 2 == 0
+            // ? Padding(
+            //   padding: const EdgeInsets.all(16.0),
+            //   child: Flex(
+            //     direction: Axis.horizontal,
+            //     children: [
+            //       Expanded(
+            //         child: ElevatedButton(
+            //           onPressed: _incrementCounter,
+            //           child: Text("Adicionar"),
+            //         ),
+            //       ),
+            //     ],
+            //   )
+            // )
+            // : Container(),
 
             // IconButton(
             //   onPressed: _incrementCounter,
