@@ -66,7 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 width: _counter % 2 == 0 ? 25.0 : 150.0,
                 color: _counter % 2 == 0 ? Colors.red : Colors.blue,
                 duration: Duration(seconds: 2),
-                curve: Curves.decelerate,
+                curve: Curves.easeInExpo,
               ),
             ),
           ],
