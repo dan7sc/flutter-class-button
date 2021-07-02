@@ -73,15 +73,25 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: ElevatedButton(
                       onPressed: _incrementCounter,
                       child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Icon(Icons.add),
                           Text("Adicionar"),
+                          Container(
+                            width: 8.0,
+                          ),
                         ],
                       ),
                       style: ElevatedButton.styleFrom(
                         primary: Colors.blue,
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadiusDirectional.circular(16),
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(16.0),
+                            bottomLeft: Radius.circular(16.0),
+                            topRight: Radius.circular(4.0),
+                            bottomRight: Radius.circular(4.0),
+                          ),
                         ),
                         elevation: 1.0,
                       ),
