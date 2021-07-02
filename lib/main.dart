@@ -53,25 +53,42 @@ class _MyHomePageState extends State<MyHomePage> {
               style: Theme.of(context).textTheme.headline4,
             ),
 
-            Material(
-              color: Colors.red,
-              borderRadius: BorderRadius.circular(30),
-              child: InkWell(
-                child: Container(
-                  height: 40.0,
-                  width: 120.0,
+            IconButton(
+              onPressed: _incrementCounter,
+              // iconSize: 50,
+              icon: Container(
+                child: Padding(
+                  padding: const EdgeInsets.all(2.0),
                   child: Center(
-                    child: Text("Adicionar"),
+                    child: Icon(Icons.add),
                   ),
                 ),
-                hoverColor: Colors.grey,
-                highlightColor: Colors.white,
-                splashColor: Colors.yellow,
-                focusColor: Colors.blue,
-                onTap: _incrementCounter,
-                borderRadius: BorderRadius.circular(30),
+                decoration: BoxDecoration(
+                  color: Colors.red,
+                  borderRadius: BorderRadius.circular(16),
+                ),
               ),
             ),
+
+            // Material(
+            //   color: Colors.red,
+            //   borderRadius: BorderRadius.circular(30),
+            //   child: InkWell(
+            //     child: Container(
+            //       height: 40.0,
+            //       width: 120.0,
+            //       child: Center(
+            //         child: Text("Adicionar"),
+            //       ),
+            //     ),
+            //     hoverColor: Colors.grey,
+            //     highlightColor: Colors.white,
+            //     splashColor: Colors.yellow,
+            //     focusColor: Colors.blue,
+            //     onTap: _incrementCounter,
+            //     borderRadius: BorderRadius.circular(30),
+            //   ),
+            // ),
 
             // GestureDetector(
             //   onTap: () {
