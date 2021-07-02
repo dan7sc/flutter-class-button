@@ -55,7 +55,8 @@ class _MyHomePageState extends State<MyHomePage> {
               style: Theme.of(context).textTheme.headline4,
             ),
             GestureDetector(
-              onTap: _incrementCounter,
+              // onTap: _incrementCounter,
+              onDoubleTap: _incrementCounter,
               child: AnimatedContainer(
                 height: _counter % 2 == 0 ? 25.0 : 150.0,
                 width: _counter % 2 == 0 ? 25.0 : 150.0,
