@@ -53,7 +53,8 @@ class _MyHomePageState extends State<MyHomePage> {
               style: Theme.of(context).textTheme.headline4,
             ),
 
-            Padding(
+            _counter % 2 == 0
+            ? Padding(
               padding: const EdgeInsets.all(16.0),
               child: Flex(
                 direction: Axis.horizontal,
@@ -66,7 +67,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
               )
-            ),
+            )
+            : Container(),
 
             // IconButton(
             //   onPressed: _incrementCounter,
