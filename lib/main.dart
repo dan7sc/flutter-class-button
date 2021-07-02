@@ -58,28 +58,38 @@ class _MyHomePageState extends State<MyHomePage> {
               style: Theme.of(context).textTheme.headline4,
             ),
 
-            RaisedButton(
-              onPressed: _incrementCounter,
-              child: Text("Adicionar"),
-              color: Colors.blue,
-            ),
+            // RaisedButton(
+            //   onPressed: _incrementCounter,
+            //   child: Text("Adicionar"),
+            //   color: Colors.blue,
+            // ),
 
-            // _counter % 2 == 0
-            // ? Padding(
-            //   padding: const EdgeInsets.all(16.0),
-            //   child: Flex(
-            //     direction: Axis.horizontal,
-            //     children: [
-            //       Expanded(
-            //         child: ElevatedButton(
-            //           onPressed: _incrementCounter,
-            //           child: Text("Adicionar"),
-            //         ),
-            //       ),
-            //     ],
-            //   )
-            // )
-            // : Container(),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Flex(
+                direction: Axis.horizontal,
+                children: [
+                  Expanded(
+                    child: ElevatedButton(
+                      onPressed: _incrementCounter,
+                      child: Row(
+                        children: [
+                          Icon(Icons.add),
+                          Text("Adicionar"),
+                        ],
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.blue,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadiusDirectional.circular(16),
+                        ),
+                        elevation: 1.0,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
 
             // IconButton(
             //   onPressed: _incrementCounter,
