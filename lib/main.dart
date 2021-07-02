@@ -20,8 +20,6 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key? key, required this.title}) : super(key: key);
 
-
-
   final String title;
 
   @override
@@ -55,15 +53,20 @@ class _MyHomePageState extends State<MyHomePage> {
               style: Theme.of(context).textTheme.headline4,
             ),
             GestureDetector(
-              // onTap: _incrementCounter,
-              // onDoubleTap: _incrementCounter,
+              onTap: () {
+                _incrementCounter();
+              },
+              onDoubleTap: () {
+                _incrementCounter();
+              },
               // onLongPress: _incrementCounter,
               onLongPressEnd: (_) => _incrementCounter(),
               child: AnimatedContainer(
                 height: _counter % 2 == 0 ? 25.0 : 150.0,
                 width: _counter % 2 == 0 ? 25.0 : 150.0,
-                color: Colors.red,
-                duration: Duration(seconds: 1),
+                color: _counter % 2 == 0 ? Colors.red : Colors.blue,
+                duration: Duration(seconds: 2),
+                curve: Curves.bounceIn,
               ),
             ),
           ],
