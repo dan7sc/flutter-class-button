@@ -64,7 +64,9 @@ class _MyHomePageState extends State<MyHomePage> {
               child: AnimatedContainer(
                 height: _counter % 2 == 0 ? 25.0 : 150.0,
                 width: _counter % 2 == 0 ? 25.0 : 150.0,
-                color: _counter % 2 == 0 ? Colors.red : Colors.blue,
+                color: _counter % 2 == 0
+                  ? Colors.red
+                  : Colors.red.withOpacity(0.1),
                 duration: Duration(seconds: 2),
                 curve: Curves.easeInExpo,
               ),
