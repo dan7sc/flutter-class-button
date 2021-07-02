@@ -69,12 +69,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   color: _counter % 2 == 0
                     ? Colors.red
                     : Colors.red.withOpacity(0.3),
-                  shape:
-                    _counter % 2 == 0 ? BoxShape.circle : BoxShape.rectangle,
+                  borderRadius: _counter % 2 == 0
+                    ? BorderRadius.circular(90)
+                    : BorderRadius.circular(16),
                 ),
                 duration: Duration(seconds: 2),
                 curve:
-                  _counter % 2 == 0 ? Curves.easeInExpo : Curves.easeOutExpo,
+                  _counter % 2 == 0 ? Curves.easeInOut: Curves.easeInOut,
               ),
             ),
           ],
