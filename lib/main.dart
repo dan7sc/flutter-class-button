@@ -57,7 +57,8 @@ class _MyHomePageState extends State<MyHomePage> {
             GestureDetector(
               // onTap: _incrementCounter,
               // onDoubleTap: _incrementCounter,
-              onLongPress: _incrementCounter,
+              // onLongPress: _incrementCounter,
+              onLongPressEnd: (_) => _incrementCounter(),
               child: AnimatedContainer(
                 height: _counter % 2 == 0 ? 25.0 : 150.0,
                 width: _counter % 2 == 0 ? 25.0 : 150.0,
