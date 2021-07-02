@@ -53,22 +53,37 @@ class _MyHomePageState extends State<MyHomePage> {
               style: Theme.of(context).textTheme.headline4,
             ),
 
-            IconButton(
-              onPressed: _incrementCounter,
-              // iconSize: 50,
-              icon: Container(
-                child: Padding(
-                  padding: const EdgeInsets.all(2.0),
-                  child: Center(
-                    child: Icon(Icons.add),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Flex(
+                direction: Axis.horizontal,
+                children: [
+                  Expanded(
+                    child: ElevatedButton(
+                      onPressed: _incrementCounter,
+                      child: Text("Adicionar"),
+                    ),
                   ),
-                ),
-                decoration: BoxDecoration(
-                  color: Colors.red,
-                  borderRadius: BorderRadius.circular(16),
-                ),
-              ),
+                ],
+              )
             ),
+
+            // IconButton(
+            //   onPressed: _incrementCounter,
+            //   // iconSize: 50,
+            //   icon: Container(
+            //     child: Padding(
+            //       padding: const EdgeInsets.all(2.0),
+            //       child: Center(
+            //         child: Icon(Icons.add),
+            //       ),
+            //     ),
+            //     decoration: BoxDecoration(
+            //       color: Colors.red,
+            //       borderRadius: BorderRadius.circular(16),
+            //     ),
+            //   ),
+            // ),
 
             // Material(
             //   color: Colors.red,
